@@ -200,6 +200,18 @@ ul
     color: #efefef;
 }
 
+.icon
+{
+    height: 2vw;
+    margin-right: 0.5vw;
+}
+
+.social
+{
+    position: absolute;
+    bottom: 10vh;
+}
+
 /* Background Number */
 .bgnumber
 {
