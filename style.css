@@ -314,4 +314,52 @@ ul
         transform: translateX(0);
         opacity: 1;
     }
-  } 
+  }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) 
+{
+    /* Menu */
+
+body
+{
+    margin-top: 10vh;
+}
+
+li 
+{
+    margin: 4.2vw;
+}
+
+/* Menu */
+.hidden
+{
+    display: none;
+}
+
+.font
+{
+    font-size: 4vw;
+    padding: 0vw;
+}
+
+/* Home */
+.main
+{
+    top: 45vh;
+}
+
+.light
+{
+    font-size: 5vw;
+}
+
+.medim
+{
+    font-size: 12vw;
+}
+
+.bold
+{
+    font-size: 12vw;
+}
