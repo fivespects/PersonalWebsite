@@ -346,7 +346,7 @@ li
 /* Home */
 .main
 {
-    top: 45vh;
+    bottom: 40vh;
 }
 
 .light
@@ -362,4 +362,32 @@ li
 .bold
 {
     font-size: 12vw;
+}
+
+/* About */
+.titlea
+{
+    font-size: 4.5vw;
+}
+
+.contenta
+{
+    font-size: 3.7vw;
+}
+
+.column1, .column2 {
+    width: 75vw;
+    height: 28vh;
+}
+
+.column1 {
+    left: 10vw;
+    top: 22vh;
+    transform: none;
+}
+
+.column2 {
+    left: 10vw;
+    top: 54vh;
+    transform: none;
 }
