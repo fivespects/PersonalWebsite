@@ -14,14 +14,21 @@ a
 }
 
 /* Menu */
+.header
+{
+    background-color: #EFEFEF;
+    position: fixed;
+    height: 12svh;
+    width: 100%;
+}
+
 .navbar
 {
-    padding: 5vh 0;
+    padding: 5svh 0;
     width: 80vw;
     position: fixed;
     font-weight: 700;
     font-size: 1.3em;
-    background-color: #efefef;
 }
 
 .navbar
@@ -250,29 +257,6 @@ a
     height: 2em;
 }
 
-/* Background Number */
-.bgnumber
-{
-    position: fixed;
-    display: flex;
-    color: #e6e6e6;
-    z-index: -1;
-    font-weight: 700;
-    font-size: 70svh;
-    transform: translate(0%, 5%);
-    bottom: 0;
-    right: 2.5vw;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none; 
-    -ms-user-select: none;
-}
-
-.bgnumber p
-{
-    margin: 0;
-}
-
 
 @media (max-width: 900px)  
 {
@@ -290,10 +274,71 @@ a
 
 .navbar
 {
-    position: fixed;
-    font-weight: 700;
-    font-size: clamp(0.5em, 1em+10vw 3em);
-    background-color: #efefef;
+    font-size: 1em;
 }
 
+/* Home */
+.name
+{
+    font-size: 1em;
+}
+
+.designer
+{
+    font-size: 2.5em;
+}
+
+.developercolor
+{
+    font-size: 2.5em;
+    margin-bottom: 2em;
+}
+
+/* About */
+.titleabout, .titleskills
+{
+    font-size: 1.2em;
+}
+
+.contentabout, .contentskills
+{
+    font-size: 1em;
+}
+
+.aboutme, .skills 
+{
+    flex: 1;
+    min-width: 15em;
+    max-width: 30em;
+    height: auto;
+}
+
+/* Work */
+.titlework
+{
+    font-size: 2.5em;
+}
+
+/* Contact */
+.contacttitle
+{
+    font-size: 1.2em;
+}
+
+.contactcontent
+{
+    max-width: 19em;
+    font-size: 1em;
+}
+
+.social
+{
+    justify-content: center;
+    gap: 2em;
+}
+
+.icon
+{
+    height: 2em;
+}
 }
