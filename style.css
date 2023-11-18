@@ -1,27 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;700&display=swap');
 
-.user-select-none 
-{
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none; 
-    -ms-user-select: none;
-}
-
 body
 {
-    margin-top: 8vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    font-family: 'Inconsolata', monospace;
+    margin: 0;
     background: #EFEFEF;
-    overflow: hidden;
-}
-
-/* Menu */
-li 
-{
-    display: inline;
-    margin-right: 3vw;
 }
 
 a
@@ -30,157 +13,215 @@ a
     color: #1a1a1a;
 }
 
-li a
+/* Menu */
+.navbar
 {
-    color: #a0a0a0;
+    padding: 5vh 0;
+    width: 80vw;
+    position: fixed;
+    font-weight: 700;
+    font-size: 1.3em;
+    background-color: #efefef;
 }
 
-li a:hover 
+.navbar
+{
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.typelogo
+{
+    display: contents;
+    margin-left: 10vw;
+}
+
+.color
+{
+    color: #7700ee;
+}
+
+.menu
+{
+    float: right;
+}
+
+.menu a:hover 
 {
     background-color: #1a1a1a;
     color: #efefef;
 }
 
-ul
+.menu a.active:hover 
 {
-    margin: 0vh;
+    background-color: #1a1a1a;
+    color: #efefef;
 }
 
-.active
+.menu a 
+{
+    color: #a0a0a0;
+    margin: 0 1em;
+}
+
+.menu a:last-child
+{
+    margin-right: 0;
+}
+
+.menu a:first-child
+{
+    margin-left: 0;
+}
+
+.menu a.active
 {
     color: #1a1a1a;
 }
 
-.font
-{
-    font-family: 'Inconsolata', monospace;
-    font-weight: 700;
-    font-size: 1.1vw;
-}
-
-.format
-{
-    font-size: 1vw;
-    display: flex;
-    justify-content: space-between;
-}
-
 /* Home */
-.main
+.home
 {
-    position: absolute;
-    bottom: 10vh;
+    height: 100svh;
+    height: 100vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-.light
+.hero
 {
-    font-family: 'Inconsolata', monospace;
-    font-size: 1.3vw; 
+    margin: 0;
+}
+
+.name
+{
+    font-size: 1.8em; 
     font-weight: 300;
+    display: block;
 }
 
-.medim
+.designer
 {
-    font-family: 'Inconsolata', monospace;
-    font-size: 3.5vw; 
+    font-size: 4.5em; 
     font-weight: 500;
+    display: block;
+    margin-top: 0.1em;
 }
 
-.bold
+.developer
 {
-    font-family: 'Inconsolata', monospace;
-    font-size: 3.5vw; 
-    font-weight: 700;
+    color: #1a1a1a;
 }
 
-.purple
+.developercolor
 {
     color: #7700ee;
-}
-
-.inline
-{
-    display: inline;
+    font-size: 4.5em; 
+    font-weight: 700;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 1.5em;
 }
 
 /* About */
-.titlea
+.about
 {
-    font-family: 'Inconsolata', monospace;
+    height: 100svh;
+    height: 100vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aboutcontainer 
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10vw;
+}
+
+.titleabout, .titleskills
+{
     font-weight: 700;
-    font-size: 1.5vw;
+    font-size: 2em;
     display: inline-block;
     background-color: #1a1a1a;
     color: #efefef;
 }
 
-.contenta
+.contentabout, .contentskills
 {
-    font-family: 'Inconsolata', monospace;
     font-weight: 500;
-    font-size: 1.2vw;
+    font-size: 1.5em;
     color: #1a1a1a;
 }
 
-.column1, .column2 {
-    position: absolute;
-    top: 38vh;
-    width: 25vw;
-    height: 15vh;
-    transform: translate(-50%, -50%);
-}
-
-.column1 {
-    left: 22.5vw;
-}
-
-.column2 {
-    right: 12vw;
+.aboutme, .skills 
+{
+    flex: 1;
+    min-width: 15em;
+    max-width: 30em;
+    height: auto;
 }
 
 /* Work */
-.work {
-    position: absolute;
-    top: 50vh;
-    width: 35vw;
-    transform: translate(-50%, -50%);
-    left: 27.5vw;
+.work
+{
+    height: 100svh;
+    height: 100vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.titlew
+.titlework
 {
-    font-family: 'Inconsolata', monospace;
     font-weight: 700;
-    font-size: 6vw;
+    font-size: 6em;
     display: inline-block;
     background-color: #1a1a1a;
     color: #efefef;
 }
 
 /* Contact */
-.contact {
-    position: absolute;
-    top: 50vh;
-    width: 35vw;
-    transform: translate(-50%, -50%);
-    left: 27.5vw;
+.contact
+{
+    height: 80svh;
+    height: 80vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.titlec
+.contactcontainer
 {
-    font-family: 'Inconsolata', monospace;
+    padding-top: 20svh;
+    padding-top: 20vh;
+}
+
+.contacttitle
+{
     font-weight: 700;
-    font-size: 2.3vw;
+    font-size: 2.2em;
     display: inline-block;
     background-color: #1a1a1a;
     color: #efefef;
 }
 
-.contentc
+.contactcontent
 {
-    font-family: 'Inconsolata', monospace;
+    max-width: 19em;
     font-weight: 500;
-    font-size: 1.8vw;
+    font-size: 1.8em;
     color: #1a1a1a;
 }
 
@@ -191,203 +232,68 @@ ul
     color: #efefef;
 }
 
-.button 
+.social
 {
-    border: none;
-    cursor: pointer;
-    font-size: 1.8vw;
-    background-color: #1a1a1a;
-    color: #efefef;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    height: 20svh;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
 }
 
 .icon
 {
-    height: 2vw;
-    margin-right: 0.5vw;
-}
-
-.social
-{
-    position: absolute;
-    bottom: 10vh;
+    height: 2em;
 }
 
 /* Background Number */
 .bgnumber
 {
-    z-index: -1;
-    font-family: 'Inconsolata', monospace;
-    font-weight: 700;
-    font-size: 52vw;
+    position: fixed;
+    display: flex;
     color: #e6e6e6;
-    position: absolute;
-    bottom: -60vw;
-    right: 2vw;
-    
-}
-
-/* Next Page */
-.nextpg
-{
-    position: absolute;
-    bottom: 10vh;
-    right: 13vw;
-}
-
-.number
-{
-    font-family: 'Inconsolata', monospace;
+    z-index: -1;
     font-weight: 700;
-    font-size: 2.6vw;
-    margin-left: -0.2vw;
-    color: #1a1a1a;
+    font-size: 70svh;
+    transform: translate(0%, 5%);
+    bottom: 0;
+    right: 2.5vw;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none;
 }
 
-.pagename
+.bgnumber p
 {
-    font-family: 'Inconsolata', monospace;
-    font-weight: 700;
-    font-size: 1.5vw;
-    color: #1a1a1a;
+    margin: 0;
 }
 
-.arrow
+
+@media (max-width: 900px)  
 {
-    height: 1vw;
-}
 
-
-/* Animations */
-
-.fadein {
-	-webkit-animation: fade-in 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-@-webkit-keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-.slideinright 
-{
-	-webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@-webkit-keyframes slide-in-right {
-    0% 
-    {
-        -webkit-transform: translateX(30px);
-        transform: translateX(30px);
-        opacity: 0;
-    }
-    100% 
-    {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        opacity: 1;
-    }
-  }
-@keyframes slide-in-right {
-    0% 
-    {
-        -webkit-transform: translateX(30px);
-        transform: translateX(30px);
-        opacity: 0;
-    }
-    100% 
-    {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-        opacity: 1;
-    }
-  }
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) 
-{
-    /* Menu */
-
-body
-{
-    margin-top: 5vh;
-}
-
-li 
-{
-    margin: 4.2vw;
-}
-
-/* Menu */
-.hidden
+.typelogo
 {
     display: none;
 }
-
-.font
+  
+.menu 
 {
-    font-size: 4vw;
-    padding: 0vw;
+    float: none;
+    text-align: center
 }
 
-/* Home */
-.main
+.navbar
 {
-    bottom: 40vh;
+    position: fixed;
+    font-weight: 700;
+    font-size: clamp(0.5em, 1em+10vw 3em);
+    background-color: #efefef;
 }
 
-.light
-{
-    font-size: 5vw;
-}
-
-.medim
-{
-    font-size: 12vw;
-}
-
-.bold
-{
-    font-size: 12vw;
-}
-
-/* About */
-.titlea
-{
-    font-size: 4.5vw;
-}
-
-.contenta
-{
-    font-size: 3.7vw;
-}
-
-.column1, .column2 {
-    width: 75vw;
-    height: 28vh;
-}
-
-.column1 {
-    left: 10vw;
-    top: 22vh;
-    transform: none;
-}
-
-.column2 {
-    left: 10vw;
-    top: 54vh;
-    transform: none;
 }
