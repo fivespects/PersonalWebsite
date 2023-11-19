@@ -1,52 +1,44 @@
-const navLinks = document.querySelectorAll('.nav-link');
+// Get all section elements
 const sections = document.querySelectorAll('section');
-const secondDigit = document.querySelector('.bgnumber .second');
+// Get all navigation links
+const navLinks = document.querySelectorAll('.nav-link');
 
-let currentSectionIndex = 0;
+// Function to update active link based on section in view
+function updateActiveLink() {
+  let current = '';
 
-function updateNumber(newIndex) {
-    const newNumber = `${newIndex + 1}`.padStart(2);
-    const currentNumber = newNumber[1];
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
 
-    secondDigit.textContent = currentNumber;
-    currentSectionIndex = newIndex;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href').substring(1) === current) {
+      link.classList.add('active');
+    }
+  });
 }
 
-function checkSectionInView() {
-    sections.forEach((section, index) => {
-        const rect = section.getBoundingClientRect();
-
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-            updateNumber(index);
-            navLinks.forEach(link => link.classList.remove('active'));
-            navLinks[index].classList.add('active');
-        }
-    });
+// Function to smoothly scroll to a section
+function smoothScroll(target) {
+  document.getElementById(target).scrollIntoView({
+    behavior: 'smooth'
+  });
 }
 
-window.addEventListener('scroll', () => {
-    checkSectionInView();
-});
+// Event listener for scroll events
+window.addEventListener('scroll', updateActiveLink);
 
-window.addEventListener('load', () => {
-    checkSectionInView();
-});
-
-navLinks.forEach((link, index) => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const sectionId = link.getAttribute('href');
-        const section = document.querySelector(sectionId);
-
-        if (section) {
-            section.scrollIntoView({
-                behavior: 'smooth'
-            });
-
-            navLinks.forEach(link => link.classList.remove('active'));
-            link.classList.add('active');
-            updateNumber(index);
-        }
-    });
+// Event listener for navigation links
+navLinks.forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetSection = this.getAttribute('href').substring(1);
+    smoothScroll(targetSection);
+  });
 });
